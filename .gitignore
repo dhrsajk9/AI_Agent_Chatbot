@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+aibotenv/
+
+# Env files
+.env
+
+# Log files
+*.log
+
+# VS Code settings (if applicable)
+.vscode/
+
+# OS-specific
+Thumbs.db
