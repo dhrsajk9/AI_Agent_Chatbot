@@ -40,6 +40,10 @@ def chat_endpoint(request: RequestState):
     return response
 
 ## Run app and explore Swagger UI Docs
-if __name__ =="__main__":
+if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=9999)
+    import os
+
+    port = int(os.environ.get("PORT", 9999))
+    uvicorn.run(app, host="0.0.0.0", port=port)
+

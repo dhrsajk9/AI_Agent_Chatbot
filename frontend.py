@@ -1,3 +1,7 @@
+import os
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:9999")
+
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -24,7 +28,7 @@ allow_web_search=st.checkbox("Allow web search")
 
 user_query=st.text_area("Enter your query: ", height=70, placeholder="Ask anything...")
    
-API_URL="http://127.0.0.1:9999/chat"
+API_URL = f"{BACKEND_URL}/chat"
 
 if st.button("Ask agent"):
     if user_query.strip():
